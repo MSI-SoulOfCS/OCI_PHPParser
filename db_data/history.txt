@@ -1,0 +1,5 @@
+takuro1026,2,1
+takuro1026,1,2
+takuro1026,3,1
+peter,1,5
+mercury,4,1

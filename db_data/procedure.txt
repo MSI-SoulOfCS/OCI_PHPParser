@@ -1,0 +1,28 @@
+create or replace procedure InitDB as begin 
+execute immediate 'DROP TABLE history'; 
+execute immediate 'DROP TABLE users'; 
+execute immediate 'DROP TABLE ticket'; 
+execute immediate 'DROP TABLE site_location';
+execute immediate 'DROP SEQUENCE site_location_id_seq'; 
+execute immediate 'DROP SEQUENCE ticket_id_seq'; 
+execute immediate 'create sequence site_location_id_seq start with 1 increment by 1';
+execute immediate 'create sequence ticket_id_seq start with 1 increment by 1'; 
+execute immediate 'create table users( id varchar2(20) not null enable, lastname varchar2(50) not null enable, firstname varchar2(50) not null enable, password varchar2(20) not null enable, email varchar2(50) not null enable, authority varchar2(20) not null enable, enabled number(1,0) not null enable, constraint users_pk primary key(id) enable)'; 
+execute immediate 'create table site_location( id number(10,0) not null enable, state varchar2(50) not null enable, city varchar2(50) not null enable, station varchar2(50) not null enable, constraint site_location_pk primary key(id) enable)'; 
+execute immediate 'create table ticket( id number(10,0) not null enable, price number(10,2) not null enable, day date not null enable, from_loc number(3,0) not null enable, to_loc number(3,0) not null enable, amount number(10,0) not null enable, activate number(1,0) not null enable, constraint ticket_pk primary key(id) enable, constraint ticket_fk_1 foreign key(from_loc) references site_location(id) enable, constraint ticket_fk_2 foreign key(to_loc) references site_location(id) enable)'; 
+execute immediate 'create table history( userid varchar2(20) not null enable, ticketid number(10,0) not null enable, amount number(10,0) not null enable, constraint history_fk_1 foreign key(userid ) references users(id) enable, constraint history_fk_2 foreign key(ticketid ) references ticket(id) enable)'; 
+commit; 
+end InitDB;
+
+
+create or replace trigger site_location_insert_trig 
+before insert on site_location 
+	for each row begin 
+		select site_location_id_seq.nextval into :new.id from dual; 
+end; 
+
+create or replace trigger ticket_insert_trig 
+before insert on ticket 
+	for each row begin 
+		select ticket_id_seq.nextval into :new.id from dual; 
+end; 

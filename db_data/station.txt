@@ -1,0 +1,5 @@
+New York (NY),New York,Penn Station (NYP)
+New York (NY),Utica,Boehlert Transportation Center (UCA)
+New York (NY),Syracuse,Regional Transportation Center (SYR)
+New York (NY),Syracuse,New York State Fair (NYF)
+Maine (ME),Augusta,Transportation Center (AGM)
