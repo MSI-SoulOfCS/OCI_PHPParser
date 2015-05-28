@@ -1,5 +1,30 @@
-New York (NY),New York,Penn Station (NYP)
-New York (NY),Utica,Boehlert Transportation Center (UCA)
-New York (NY),Syracuse,Regional Transportation Center (SYR)
-New York (NY),Syracuse,New York State Fair (NYF)
-Maine (ME),Augusta,Transportation Center (AGM)
+NY,NewYork, Penn Station
+NY,NewYork,Jamaica
+NY,NewYork,Yonkers Amtrak
+NJ,Princeton,West Trenton
+NJ,Princeton,Joe's Train Station
+NJ,Princeton,Princeton Junction
+NJ,Hoboken ,Hoboken terminal
+MA,Boston,North Station
+MA,Boston,Haymarket Station
+MA,Boston,Back Bay Station
+CA,SanFrancisco,San Jose Train Station
+CA,SanFrancisco,San Francisco Caltrain Station
+CA,Los Angeles,Union Station
+CA,Los Angeles,Pomona-North Metrolink Station
+CA,Los Angeles,Santa Train Station
+TX,Abilene,Abilene Regional station
+TX,Amarillo,Rick Husband Amarillo station
+TX,Austin,Austin-Bergstrom station
+FL,Orlando,Orlando Amtrak Train Station
+FL,Orlando,SunRail Station
+FL,Orlando,Church Street Station
+FL,Miami,Miami Amtrak Train Station
+NC,Winston-Salem,Winston-Salem Amtrak Train Station
+NC,Winston-Salem,Willow Street Train Station
+NC,Chapel Hill,Chapel Hill Metro Station
+NC,Chapel Hill,Southern Rail
+NC,Chapel Hill,Amtrak Station
+GA,Appling County,Apple Station
+GA,Appling County,Sant Train Station
+GA,Appling County,Amtrak Station
